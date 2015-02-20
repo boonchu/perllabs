@@ -46,7 +46,16 @@ my $p = new Person(name => "boonchu");
 $p->hello;
 ```
 ###### Constructor (how to contructs object, class attributes, etc)
+```
+sub BUILD {
+        my ($self) = @_;
 
+        if ($self->name eq 'boonchu') {
+                confess 'Boonchu is not allowed for using Person class';
+        }
+        return;
+}
+```
 ###### Delegation
 
 ###### Singleton
@@ -55,4 +64,7 @@ $p->hello;
 
 ###### Prototype
 
-
+* Reference
+- [Moose part I](http://www.stonehenge.com/merlyn/LinuxMag/col94.html)
+- [Moose part II](http://www.stonehenge.com/merlyn/LinuxMag/col95.html)
+- [Moose Cookbook](http://search.cpan.org/~ether/Moose-2.1403/lib/Moose/Cookbook.pod)

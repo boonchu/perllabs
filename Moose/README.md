@@ -2,7 +2,7 @@
 
 Moose is perl object oriented programming libraries. 
 
-* ####### Basic of object attributes such as get or set, etc.
+###### Basic of object attributes such as get or set, etc.
 * Getter
 ```
 packge Person;
@@ -41,14 +41,14 @@ use warnings;
 my $p = new Person(name => "boonchu");
 $p->hello;
 ```
-* Constructor (how to contructs object, class attributes, etc)
+###### Constructor (how to contructs object, class attributes, etc)
 
-* Delegation
+###### Delegation
 
-* Singleton
+###### Singleton
 
-* Decorating
+###### Decorating
 
-* Prototype
+###### Prototype
 
 

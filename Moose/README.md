@@ -2,6 +2,10 @@
 
 Moose is perl object oriented programming libraries. 
 
+###### Install
+```
+$ sudo yum install perl-Moose
+```
 ###### Basic of object attributes such as get or set, etc.
 * Getter
 ```

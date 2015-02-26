@@ -56,4 +56,18 @@ MariaDB [(none)]> SELECT User, Host FROM mysql.user WHERE Host <> 'localhost';
 3 rows in set (0.00 sec)
 
 MariaDB [(none)]> FLUSH PRIVILEGES;
+
+it works from client.
+bigchoo@vmk1 1003 $ mysql -u webuser -h192.168.1.101 -papp123
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 17
+Server version: 5.5.41-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2014, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
 ```
+* how-to: [create schema tables by workbench](http://dev.mysql.com/doc/workbench/en/wb-installing-mac.html)
+

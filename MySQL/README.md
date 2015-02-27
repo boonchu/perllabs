@@ -82,3 +82,33 @@ Query OK, 0 rows affected (0.00 sec)
   - [Model new data](http://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial-creating-a-model.html)
   - This is simple ER tool ever! Once I have done the ER diagram, I pushed it to live Database that I prepared.
 ![ER](https://github.com/boonchu/perllabs/blob/master/MySQL/ER.png)
+```
+MariaDB [(none)]> use webdb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [webdb]> select * from links;
++---------+------------------------------------+----------------------+--------+
+| link_id | title                              | url                  | target |
++---------+------------------------------------+----------------------+--------+
+|       0 | Comprehensive Perl Archive Network | http://www.cpan.org/ | _blank |
++---------+------------------------------------+----------------------+--------+
+1 row in set (0.00 sec)
+
+MariaDB [webdb]> select * from tags;
++--------+------+
+| tag_id | tag  |
++--------+------+
+|      0 | Perl |
++--------+------+
+1 row in set (0.00 sec)
+
+MariaDB [webdb]> select * from link_tags;
++---------+--------+
+| link_id | tag_id |
++---------+--------+
+|       0 |      0 |
++---------+--------+
+1 row in set (0.00 sec)
+```

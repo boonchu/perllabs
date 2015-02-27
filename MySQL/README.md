@@ -134,5 +134,24 @@ real    0m0.033s
 user    0m0.022s
 sys     0m0.008s
 ```
+* Useful top for observation database mytop, innotop
+```
+bigchoo@server1 /tmp/mytop (master)$ ./mytop -uroot -predhat -dwebdb
+MySQL on localhost (5.5.41-MariaDB)                                                                                                   up 0+10:07:01 [19:45:08]
+ Queries: 3.8k   qps:    0 Slow:     0.0         Se/In/Up/De(%):    02/00/00/00
+
+ Key Efficiency: 91.4%  Bps in/out:   2.8/ 1.1k
+
+      Id      User         Host/IP         DB      Time    Cmd Query or State
+       --      ----         -------         --      ----    --- ----------
+       64      root       localhost      webdb         0  Query show full processlist
+       26  webadmin             vm1      webdb         3  Sleep
+       23  webadmin             vm1      webdb       301  Sleep
+       24  webadmin             vm1      webdb       301  Sleep
+       49  webadmin             vm1      webdb      2127  Sleep
+       25  webadmin             vm1      webdb      2298  Sleep
+```
 Reference web:
 * http://www.mysqltutorial.org/ Ton of info. I recommended this one.
+* https://github.com/jzawodn/mytop
+* https://github.com/innotop/innotop

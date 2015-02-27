@@ -70,4 +70,11 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]>
 ```
 * how-to: [create schema tables by workbench](http://dev.mysql.com/doc/workbench/en/wb-installing-mac.html)
+  - grant admin user access for workbench to access
+```
+MariaDB [(none)]> GRANT ALL ON webdb.* TO 'webadmin'@'192.168.1.151' IDENTIFIED BY 'admin123';
+Query OK, 0 rows affected (0.00 sec)
+```
+  - add new connection from workbench app
+  - [Model new data](http://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial-creating-a-model.html)
 

@@ -8,7 +8,7 @@ use DBI;
 say "Perl MySQL Transaction Demo";
  
 # MySQL database configurations
-my $dsn = "DBI:mysql:webapp";
+my $dsn = "DBI:mysql:database=webdb;host=server1;port=3306";
 my $username = "webuser";
 my $password = 'app123';
  

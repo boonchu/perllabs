@@ -81,4 +81,4 @@ Query OK, 0 rows affected (0.00 sec)
 ![Workbench_front](https://github.com/boonchu/perllabs/blob/master/MySQL/Workbench_front.png)
   - [Model new data](http://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial-creating-a-model.html)
   - This is simple ER tool ever! Once I have done the ER diagram, I pushed it to live Database that I prepared.
-
+![ER](https://github.com/boonchu/perllabs/blob/master/MySQL/ER.png)

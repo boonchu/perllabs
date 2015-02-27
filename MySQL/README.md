@@ -134,3 +134,5 @@ real    0m0.033s
 user    0m0.022s
 sys     0m0.008s
 ```
+Reference web:
+* http://www.mysqltutorial.org/ Ton of info. I recommended this one.

@@ -119,3 +119,18 @@ Perl MySQL Transaction Demo
 DBD::mysql::st execute failed: Duplicate entry '0' for key 'PRIMARY' at ./db.pl line 26.
 Error inserting the link and tag: DBD::mysql::st execute failed: Duplicate entry '0' for key 'PRIMARY' at ./db.pl line 26.
 ```
+* read from comprehensive query like inner join
+```
+my $sql = "SELECT title, url, target,tag
+	FROM link_tags
+	INNER JOIN links ON links.link_id = link_tags.link_id
+	INNER JOIN tags ON tags.tag_id = link_tags.tag_id";
+
+bigchoo@vmk1 1075 $ time ./query.pl
+Perl MySQL Transaction Demo
+Comprehensive Perl Archive Network      http://www.cpan.org/    _blank  Perl
+
+real    0m0.033s
+user    0m0.022s
+sys     0m0.008s
+```

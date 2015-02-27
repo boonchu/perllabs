@@ -112,3 +112,10 @@ MariaDB [webdb]> select * from link_tags;
 +---------+--------+
 1 row in set (0.00 sec)
 ```
+* what if I run again? when it commits, it falls back.
+```
+bigchoo@vmk1 1063 $ ./db.pl
+Perl MySQL Transaction Demo
+DBD::mysql::st execute failed: Duplicate entry '0' for key 'PRIMARY' at ./db.pl line 26.
+Error inserting the link and tag: DBD::mysql::st execute failed: Duplicate entry '0' for key 'PRIMARY' at ./db.pl line 26.
+```

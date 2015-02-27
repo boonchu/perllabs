@@ -75,6 +75,9 @@ MariaDB [(none)]>
 MariaDB [(none)]> GRANT ALL ON webdb.* TO 'webadmin'@'192.168.1.151' IDENTIFIED BY 'admin123';
 Query OK, 0 rows affected (0.00 sec)
 ```
+
   - add new connection from workbench app
+![Connection](https://github.com/boonchu/perllabs/blob/master/MySQL/Connection.png)
+![Workbench_front](https://github.com/boonchu/perllabs/blob/master/MySQL/Workbench_front.png)
   - [Model new data](http://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial-creating-a-model.html)
 

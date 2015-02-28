@@ -114,10 +114,10 @@ MariaDB [webdb]> select * from link_tags;
 ```
 * what if I run again? when it commits, it falls back.
 ```
-bigchoo@vmk1 1063 $ ./db.pl
+bigchoo@vmk1 1020 $ ./insert1.pl
 Perl MySQL Transaction Demo
-DBD::mysql::st execute failed: Duplicate entry '0' for key 'PRIMARY' at ./db.pl line 26.
-Error inserting the link and tag: DBD::mysql::st execute failed: Duplicate entry '0' for key 'PRIMARY' at ./db.pl line 26.
+DBD::mysql::st execute failed: Duplicate entry '0' for key 'PRIMARY' at ./insert1.pl line 26.
+Error inserting the link and tag: DBD::mysql::st execute failed: Duplicate entry '0' for key 'PRIMARY' at ./insert1.pl line 26.
 ```
 * read from comprehensive query like inner join
 ```

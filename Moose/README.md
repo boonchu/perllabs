@@ -45,7 +45,7 @@ use warnings;
 my $p = new Person(name => "boonchu");
 $p->hello;
 ```
-###### Constructor (how to contructs object, class attributes, etc)
+###### Basic of Constructor (how to contructs object, class attributes, etc)
 ```
 sub BUILD {
         my ($self) = @_;
@@ -56,13 +56,30 @@ sub BUILD {
         return;
 }
 ```
-###### Delegation
+###### Basic of Immutable
 
-###### Singleton
+###### Pattern 1: Delegation
+* perl support delegation that allow code to handle data structures like object. 
+```
+has 'mapping' => (
+        traits  => ['Hash'],
+        is      => 'rw',
+        isa     => 'HashRef[Str]',
+        default => sub { {} },
+        handles => {
+                exists_in_mapping => 'exists',
+                ids_in_mapping    => 'keys',
+                get_mapping       => 'get',
+                set_mapping       => 'set',
+                set_quantity      => [ set => 'quantity' ],
+      },
+);
+```
+###### Pattern 2: Singleton
 
-###### Decorating
+###### Pattern 3: Adapter
 
-###### Prototype
+###### Pattern 4: Proxy
 
 * Reference
 - [Moose part I](http://www.stonehenge.com/merlyn/LinuxMag/col94.html)

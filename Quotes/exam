@@ -1,0 +1,27 @@
+#! /usr/bin/perl -w
+
+use strict;
+
+my %words = ();
+
+my $input = <<'EOF';
+The man sprang from his chair and paced up and down the room in
+uncontrollable agitation. Then, with a gesture of desperation, he
+tore the mask from his face and hurled it upon the ground. "You
+are right," he cried; "I am the King. Why should I attempt to
+conceal it?"
+EOF
+
+# print $input;
+
+foreach (split(/\r/, $input)) {
+    s/[\,\",.,\;,\?]//g;
+    my @more_words = split(' ', $_);
+    foreach (@more_words) {
+        $words{$_}++;
+    };
+};
+
+foreach my $key (sort { $words{$a} <=> $words{$b} } keys %words) {
+    print "$key and $words{$key}\n";
+};

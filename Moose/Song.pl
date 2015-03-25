@@ -40,7 +40,6 @@ sub set_path {
 }
 
 no Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;
 
